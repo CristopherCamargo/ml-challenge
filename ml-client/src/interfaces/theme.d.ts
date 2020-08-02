@@ -8,6 +8,7 @@ declare global {
     secondary: string;
     yellow: string;
     default: string;
+    gray: string;
   }
 }
 

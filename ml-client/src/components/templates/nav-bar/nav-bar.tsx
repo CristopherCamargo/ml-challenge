@@ -1,5 +1,5 @@
 import React from "react";
-import { NavBarWrapper, Logo, Search } from "./styles";
+import { NavBarWrapper, Logo, Search, Center } from "./styles";
 
 interface Props {
   logo: JSX.Element;
@@ -9,8 +9,10 @@ interface Props {
 const NavBar = ({ logo, search }: Props) => {
   return (
     <NavBarWrapper>
-      <Logo>{logo}</Logo>
-      <Search>{search}</Search>
+      <Center>
+        <Logo>{logo}</Logo>
+        <Search>{search}</Search>
+      </Center>
     </NavBarWrapper>
   );
 };

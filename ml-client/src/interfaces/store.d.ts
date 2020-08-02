@@ -1,0 +1,3 @@
+interface Products {
+  id: string;
+}

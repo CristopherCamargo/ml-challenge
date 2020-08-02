@@ -5,7 +5,8 @@ const MLTheme: DefaultTheme = {
     primary: "",
     secondary: "",
     yellow: "#ffe600",
-    default: "gray"
+    default: "gray",
+    gray: "#eee"
   },
   input: {
     height: "32px",

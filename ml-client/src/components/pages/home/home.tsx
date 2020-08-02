@@ -1,10 +1,11 @@
 import React from "react";
-import { NavBarHOC } from "~/components/organisms";
+import { NavBarHOC, ProductListHOC } from "~/components/organisms";
 
 const Home = () => {
   return (
     <>
       <NavBarHOC />
+      <ProductListHOC />
     </>
   );
 };
