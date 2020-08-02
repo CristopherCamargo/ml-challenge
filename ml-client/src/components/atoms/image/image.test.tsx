@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { Image, ImageHOC } from './';
+import React from "react";
+import { shallow } from "enzyme";
+import { Image } from "./";
 
-describe('image component', () => {});
+describe("image component", () => {});

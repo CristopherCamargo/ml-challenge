@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { Logo, LogoHOC } from './';
+import React from "react";
+import { shallow } from "enzyme";
+import { Logo } from "./";
 
-describe('logo component', () => {});
+describe("logo component", () => {});

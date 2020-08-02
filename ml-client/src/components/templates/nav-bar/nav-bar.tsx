@@ -1,8 +1,18 @@
-import React from 'react';
-import { NavBarWrapper } from './styles';
+import React from "react";
+import { NavBarWrapper, Logo, Search } from "./styles";
 
-const NavBar = () => {
-  return <NavBarWrapper></NavBarWrapper>;
+interface Props {
+  logo: JSX.Element;
+  search: JSX.Element;
+}
+
+const NavBar = ({ logo, search }: Props) => {
+  return (
+    <NavBarWrapper>
+      <Logo>{logo}</Logo>
+      <Search>{search}</Search>
+    </NavBarWrapper>
+  );
 };
 
 export default NavBar;

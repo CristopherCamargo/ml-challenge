@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { Input, InputHOC } from './';
+import React from "react";
+import { shallow } from "enzyme";
+import { Input } from "./";
 
-describe('input component', () => {});
+describe("input component", () => {});

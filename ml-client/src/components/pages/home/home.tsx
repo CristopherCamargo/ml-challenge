@@ -1,7 +1,12 @@
-import React from 'react';
+import React from "react";
+import { NavBarHOC } from "~/components/organisms";
 
 const Home = () => {
-  return <></>;
+  return (
+    <>
+      <NavBarHOC />
+    </>
+  );
 };
 
 export default Home;

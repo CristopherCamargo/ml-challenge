@@ -1,5 +1,5 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { NavBar, NavBarHOC } from './';
+import React from "react";
+import { shallow } from "enzyme";
+import { NavBar } from "./";
 
-describe('nav-bar component', () => {});
+describe("nav-bar component", () => {});
