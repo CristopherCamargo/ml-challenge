@@ -1,0 +1,4 @@
+node_modules
+.envx
+# misc
+.DS_Store
