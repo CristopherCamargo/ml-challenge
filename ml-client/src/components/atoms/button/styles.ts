@@ -24,6 +24,10 @@ export const ButtonWrapper = styled.button<Props>`
       css`
         background-color: ${theme.colors.primary};
         color: white;
+        @media (max-width: 768px) {
+          height: ${theme.button.sizeMobile[size]};
+          font-size: 22px;
+        }
       `}
     `}
 `;

@@ -8,5 +8,9 @@ export const ListTemplateWrapper = styled.div`
   margin-top: 20px;
   section {
     width: 1080px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 `;

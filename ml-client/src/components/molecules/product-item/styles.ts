@@ -22,4 +22,5 @@ export const PriceWrapper = styled.div`
     margin-top: 5px;
   }
   margin-bottom: 32px;
+  text-overflow: ellipsis;
 `;

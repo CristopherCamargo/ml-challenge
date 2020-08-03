@@ -25,6 +25,7 @@ declare module "styled-components" {
     };
     button: {
       size: Record<Size, string>;
+      sizeMobile: Record<Size, string>;
       borderRadius: string;
     };
   }

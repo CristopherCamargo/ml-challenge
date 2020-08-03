@@ -26,6 +26,11 @@ const MLTheme: DefaultTheme = {
       medium: "34px",
       large: "60px"
     },
+    sizeMobile: {
+      small: "44px",
+      medium: "68px",
+      large: "120px"
+    },
     borderRadius: "5px"
   }
 };

@@ -5,11 +5,20 @@ export const ProductDetailTemplateWrapper = styled.section`
   margin: 20px auto;
   background-color: white;
   padding: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0px;
+  }
 `;
 
 export const Top = styled.div`
   display: flex;
   width: 100%;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const Aside = styled.aside`
@@ -17,6 +26,15 @@ export const Aside = styled.aside`
   width: 30%;
   justify-content: flex-end;
   margin-right: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0px;
+    display: block;
+    > div {
+      padding: 8px;
+    }
+  }
 `;
 
 export const Image = styled.div`
@@ -25,4 +43,9 @@ export const Image = styled.div`
 
 export const Bottom = styled.div`
   margin-left: 16px;
+  margin-top: 32px;
+
+  @media (max-width: 768px) {
+    margin-left: 0px;
+  }
 `;

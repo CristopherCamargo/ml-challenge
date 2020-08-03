@@ -11,6 +11,11 @@ export const NavBarWrapper = styled.div`
 export const Center = styled.div`
   width: 1080px;
   display: flex;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 5px;
+  }
 `;
 
 export const Logo = styled.div`
