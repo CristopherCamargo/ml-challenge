@@ -3,5 +3,7 @@ import { Input } from "./input";
 import { Image } from "./image";
 import { Logo } from "./logo";
 import { Icon } from "./icon";
+import { Empty } from "./empty";
+import { Loading } from "./loading";
 
-export { Button, Input, Image, Logo, Icon };
+export { Button, Input, Image, Logo, Icon, Empty, Loading };

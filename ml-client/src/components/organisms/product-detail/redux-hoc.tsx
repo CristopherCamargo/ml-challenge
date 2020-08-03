@@ -1,14 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ProductDetail } from "./";
+import { getCurrentProduct } from "~/store/products/selectors";
 
 const ProductDetailHOC = () => {
-  return (
-    <ProductDetail
-      image="https://mac-center.com/wp-content/uploads/2020/06/Position-2-8-1.jpg"
-      altImage="bueno producto"
-      description="Description"
-    />
-  );
+  const currentProduct = useSelector(getCurrentProduct);
+  return <ProductDetail image="" altImage="" description="" />;
 };
 
 export default ProductDetailHOC;

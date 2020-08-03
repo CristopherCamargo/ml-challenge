@@ -4,7 +4,7 @@ import { ProductItemHOC } from "~/components/molecules";
 import { ListTemplate } from "~/components/templates/list-template";
 
 interface Props {
-  products: Products[];
+  products: Product[];
 }
 
 const ProductList = ({ products }: Props) => {

@@ -1,21 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { ProductList } from "./";
+import { getProducts } from "~/store/products/selectors";
 
 const ProductListHOC = () => {
-  const products = [
-    {
-      id: "1"
-    },
-    {
-      id: "2"
-    },
-    {
-      id: "3"
-    },
-    {
-      id: "4"
-    }
-  ];
+  const products = useSelector(getProducts);
+
   return <ProductList products={products} />;
 };
 
