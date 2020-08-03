@@ -5,7 +5,7 @@ interface Props {
   primary?: boolean;
   secondary?: boolean;
   color?: Color;
-  children: JSX.Element;
+  children: JSX.Element | string;
   size?: Size;
 }
 

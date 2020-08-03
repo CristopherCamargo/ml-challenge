@@ -1,5 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { NavBar } from "./";
+import { NavBarTemplate } from ".";
 
 describe("nav-bar component", () => {});

@@ -2,7 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 const MLTheme: DefaultTheme = {
   colors: {
-    primary: "",
+    primary: "#3483fa",
     secondary: "",
     yellow: "#ffe600",
     default: "gray",

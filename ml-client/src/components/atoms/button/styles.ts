@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface Props {
   primary: boolean;
@@ -8,17 +8,22 @@ interface Props {
 }
 
 export const ButtonWrapper = styled.button<Props>`
-  height: ${({ size, theme }) => theme.button.size[size]};
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: ${({
-    theme: {
-      button: { borderRadius }
-    }
-  }) => borderRadius};
+  ${({ size, primary, theme }) =>
+    css`
+      height: ${theme.button.size[size]};
+      width: 100%;
+      border: none;
+      outline: none;
+      border-radius: ${theme.button.borderRadius};
 
-  :hover {
-    opacity: 0.8;
-  }
+      :hover {
+        opacity: 0.8;
+      }
+
+      ${primary &&
+      css`
+        background-color: ${theme.colors.primary};
+        color: white;
+      `}
+    `}
 `;
