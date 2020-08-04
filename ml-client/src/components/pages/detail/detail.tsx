@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { NavBarHOC, ProductDetailHOC } from "~/components/organisms";
-import { Loading } from "~/components/atoms";
-import { render } from "enzyme";
+import { Loading, ErrorHOC } from "~/components/atoms";
 
 interface Props {
   loading: boolean;
@@ -18,6 +17,7 @@ const Detail = ({ loading }: Props) => {
   return (
     <>
       <NavBarHOC />
+      <ErrorHOC />
       {renderMemo}
     </>
   );

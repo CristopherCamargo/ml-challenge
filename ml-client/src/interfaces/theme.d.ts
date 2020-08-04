@@ -28,5 +28,10 @@ declare module "styled-components" {
       sizeMobile: Record<Size, string>;
       borderRadius: string;
     };
+    error: {
+      color: string;
+      backgroundColor: string;
+      borderColor: string;
+    };
   }
 }

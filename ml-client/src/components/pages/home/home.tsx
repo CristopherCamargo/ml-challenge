@@ -1,9 +1,6 @@
 import React, { useMemo } from "react";
-import { useSelector } from "react-redux";
 import { NavBarHOC, ProductListHOC } from "~/components/organisms";
-import { getProducts } from "~/store/products/selectors";
-import { getLoading } from "~/store/loading/selectors";
-import { Empty, Loading } from "~/components/atoms";
+import { Empty, Loading, ErrorHOC } from "~/components/atoms";
 
 interface Props {
   loading: boolean;
@@ -26,6 +23,7 @@ const Home = ({ loading, products }: Props) => {
   return (
     <>
       <NavBarHOC />
+      <ErrorHOC />
       {ProductsMemo}
     </>
   );

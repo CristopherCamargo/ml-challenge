@@ -7,12 +7,14 @@ import { history } from "~/router";
 
 import ProductsMiddleware from "~/store/products/middleware";
 import SearchMiddleware from "~/store/search/middleware";
+import ErrorMiddleware from "~/store/error/middleware";
 
 const middlewares = [
   thunk,
   routerMiddleware(history),
   ProductsMiddleware,
-  SearchMiddleware
+  SearchMiddleware,
+  ErrorMiddleware
 ];
 
 if (process.env.NODE_ENV === "development") {

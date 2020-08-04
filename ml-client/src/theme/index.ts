@@ -32,6 +32,11 @@ const MLTheme: DefaultTheme = {
       large: "120px"
     },
     borderRadius: "5px"
+  },
+  error: {
+    color: "#721c24",
+    backgroundColor: "#f8d7da",
+    borderColor: "#f5c6cb"
   }
 };
 

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { Switch, Route, Redirect, Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
-import routes from "./routes";
+import { Loading } from "~/components/atoms";
+
+const HomeHOC = lazy(() => import("~/components/pages/home/redux-hoc"));
+const DetailHOC = lazy(() => import("~/components/pages/detail/redux-hoc"));
 
 export const history = createBrowserHistory();
 
@@ -9,9 +12,11 @@ const AppRoutes = () => {
   return (
     <Router history={history}>
       <Switch>
-        {routes.map(({ path, component }) => (
-          <Route key={path} path={path} component={component} exact />
-        ))}
+        <Suspense fallback={<Loading />}>
+          <Route exact path="/" component={HomeHOC} />
+          <Route exact path="/items" component={HomeHOC} />
+          <Route exact path="/items/:id" component={DetailHOC} />
+        </Suspense>
         <Redirect to="/oops" />
       </Switch>
     </Router>

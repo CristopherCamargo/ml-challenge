@@ -2,6 +2,10 @@ interface SearchStore {
   text: string;
 }
 
+interface ErrorStore {
+  isError: boolean;
+}
+
 interface Route {
   location: {
     pathname: string;
@@ -41,4 +45,5 @@ interface ReduxStore {
   loading: LoadingStore;
   search: Search;
   router: Route;
+  error: ErrorStore;
 }

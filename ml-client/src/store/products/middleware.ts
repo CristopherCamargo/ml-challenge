@@ -10,6 +10,7 @@ import {
   endFetchProducts
 } from "./actions";
 import { normalizerProducts, normalizerProductDetail } from "./normalizer";
+import { setError } from "~/store/error/actions";
 
 const onFetchProducts = async (
   getState: () => ReduxStore,
@@ -24,7 +25,8 @@ const onFetchProducts = async (
     const result = await fetchProductsQuery(text);
     dispatch(normalizeProducts(result));
   } catch (error) {
-    throw new Error(error);
+    dispatch(setError(true));
+    dispatch(setFetching(false));
   }
 };
 
@@ -43,7 +45,8 @@ const onFetchCurrentProduct = async (
     const result = await fetchProductDetail(id);
     dispatch(normalizeCurrentProduct(result));
   } catch (error) {
-    throw new Error(error);
+    dispatch(setError(true));
+    dispatch(setFetching(false));
   }
 };
 
