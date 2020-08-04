@@ -7,6 +7,7 @@ interface Props {
   color?: Color;
   children: JSX.Element | string;
   size?: Size;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -14,7 +15,8 @@ const Button = ({
   secondary = false,
   color = "default",
   children,
-  size = "medium"
+  size = "medium",
+  onClick = () => {}
 }: Props) => {
   return (
     <ButtonWrapper
@@ -23,6 +25,7 @@ const Button = ({
       secondary={secondary}
       color={color}
       size={size}
+      onClick={onClick}
     >
       {children}
     </ButtonWrapper>

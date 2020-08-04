@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
-var { getQuery, getItem } = require("./resolvers");
-var { serializeItem, serializeQuery } = require("./serializer");
+var { getQuery, getItem } = require("../src/resolvers");
+var { serializeItem, serializeQuery } = require("../src/serializer");
 
 router.get("/api/items", async function (req, res, next) {
   const {

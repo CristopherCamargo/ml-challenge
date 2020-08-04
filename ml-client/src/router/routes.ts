@@ -6,7 +6,11 @@ const routes = [
     component: HomeHOC
   },
   {
-    path: "/item/:id",
+    path: "/items",
+    component: HomeHOC
+  },
+  {
+    path: "/items/:id",
     component: DetailHOC
   }
 ];

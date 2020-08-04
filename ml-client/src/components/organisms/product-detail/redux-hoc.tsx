@@ -5,7 +5,18 @@ import { getCurrentProduct } from "~/store/products/selectors";
 
 const ProductDetailHOC = () => {
   const currentProduct = useSelector(getCurrentProduct);
-  return <ProductDetail image="" altImage="" description="" />;
+
+  if (!currentProduct) {
+    return null;
+  }
+
+  return (
+    <ProductDetail
+      image={currentProduct.imageURI}
+      altImage={currentProduct.shortDescription}
+      description={currentProduct.description}
+    />
+  );
 };
 
 export default ProductDetailHOC;

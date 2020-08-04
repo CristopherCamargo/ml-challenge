@@ -4,7 +4,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended"
   ],
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: ["react", "@typescript-eslint"],
   env: {
     node: true,
     browser: true,
@@ -12,7 +12,6 @@ module.exports = {
     jest: true
   },
   rules: {
-    "prettier/prettier": ["error", { singleQuote: true }],
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/explicit-function-return-type": 0
   },

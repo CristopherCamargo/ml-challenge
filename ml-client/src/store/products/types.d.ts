@@ -6,6 +6,14 @@ type ProductsActionsTypes =
       type: "END-FETCHING-PRODUCTS";
     }
   | {
+      type: "NORMALIZE-PRODUCTS";
+      payload: FetchProducts;
+    }
+  | {
+      type: "NORMALIZE-DETAIL";
+      payload: FetchProductDetail;
+    }
+  | {
       type: "SET-PRODUCTS";
       payload: Product[];
     }

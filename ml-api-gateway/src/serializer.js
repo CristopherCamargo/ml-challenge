@@ -1,10 +1,4 @@
-function utilDecimals(price) {
-  var split = price.toString().split(".");
-  if (!split[1]) {
-    return 0;
-  }
-  return split[1].length;
-}
+var { utilDecimals } = require("./utils");
 
 function serializeQuery(data) {
   var values = data.available_filters.map((filter) => filter.values);
@@ -25,6 +19,7 @@ function serializeQuery(data) {
     items: data.results.map((item) => ({
       id: item.id,
       title: item.title,
+      city: item.address.city_name,
       price: {
         currency: item.currency_id,
         amount: item.price,
@@ -51,7 +46,7 @@ function serializeItem(data) {
         amount: data.price,
         decimals: utilDecimals(data.price)
       },
-      picture: data.thumbnail,
+      picture: data.pictures[0].url,
       condition: data.condition,
       free_shipping: data.shipping.free_shipping || false,
       sold_quantity: data.sold_quantity,
