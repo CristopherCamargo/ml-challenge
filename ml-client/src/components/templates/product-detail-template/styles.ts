@@ -39,6 +39,7 @@ export const Aside = styled.aside`
 
 export const Image = styled.div`
   width: 100%;
+  margin-right: 32px;
 `;
 
 export const Bottom = styled.div`
