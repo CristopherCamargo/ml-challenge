@@ -5,7 +5,10 @@ import logger from "redux-logger";
 import { AppReducers } from "~/store/reducers";
 import { history } from "~/router";
 
-const middlewares = [];
+import ProductsMiddleware from "~/store/products/middleware";
+import SearchMiddleware from "~/store/search/middleware";
+
+const middlewares = [ProductsMiddleware, SearchMiddleware];
 
 if (process.env.NODE_ENV === "development") {
   middlewares.push(logger);

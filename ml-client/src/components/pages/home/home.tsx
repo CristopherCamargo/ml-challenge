@@ -5,10 +5,12 @@ import { getProducts } from "~/store/products/selectors";
 import { getLoading } from "~/store/loading/selectors";
 import { Empty, Loading } from "~/components/atoms";
 
-const Home = () => {
-  const products = useSelector(getProducts);
-  const loading = useSelector(getLoading);
+interface Props {
+  loading: boolean;
+  products: Product[];
+}
 
+const Home = ({ loading, products }: Props) => {
   const ProductsMemo = useMemo(() => {
     if (loading) {
       return <Loading />;

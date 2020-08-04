@@ -1,19 +1,31 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { ProductItem } from "./";
+import { useSelector } from "react-redux";
+import { getProductById } from "~/store/products/selectors";
 
 interface Props {
   id: string;
 }
 
 const ProductItemHOC = ({ id }: Props) => {
+  const product = useSelector((state: ReduxStore) => getProductById(state, id));
+  const urlItem = `/items/${id}`;
+
+  if (!product) {
+    return null;
+  }
+
   return (
     <ProductItem
       alt="first"
-      description="Descripcion completa"
-      price="$1980"
-      city="Bogota"
-      image="https://mac-center.com/wp-content/uploads/2020/06/Position-2-8-1.jpg"
-      status="free-shipping"
+      urlItem={urlItem}
+      description={product.shortDescription}
+      price={`$ ${new Intl.NumberFormat("de-DE", {
+        currency: product.currency
+      }).format(product.price)}`}
+      city={product.city}
+      image={product.imageURI}
+      status={product.status}
     />
   );
 };

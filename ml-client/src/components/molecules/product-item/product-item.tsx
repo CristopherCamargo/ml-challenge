@@ -4,6 +4,7 @@ import { ProductItemTemplate } from "~/components/templates";
 import { Image, Icon } from "~/components/atoms";
 import FreeShiping from "~/assets/ic_shipping.png";
 import FreeShiping2x from "~/assets/ic_shipping@2x.png";
+import { Link } from "react-router-dom";
 
 interface Props {
   image: string;
@@ -12,6 +13,7 @@ interface Props {
   description: string;
   city: string;
   status: "free-shipping" | "none";
+  urlItem: string;
 }
 
 const ProductItem = ({
@@ -20,12 +22,17 @@ const ProductItem = ({
   city,
   image,
   alt,
-  status
+  status,
+  urlItem
 }: Props) => {
   return (
     <ProductItemWrapper>
       <ProductItemTemplate
-        image={<Image src={image} alt={alt} />}
+        image={
+          <Link to={urlItem} href={urlItem}>
+            <Image src={image} alt={alt} />
+          </Link>
+        }
         price={
           <PriceWrapper>
             <strong>{price}</strong>
@@ -34,7 +41,11 @@ const ProductItem = ({
             )}
           </PriceWrapper>
         }
-        description={<p>{description}</p>}
+        description={
+          <Link to={urlItem} href={urlItem}>
+            <p>{description}</p>
+          </Link>
+        }
         city={<p className="city">{city}</p>}
       />
     </ProductItemWrapper>

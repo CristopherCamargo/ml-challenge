@@ -7,9 +7,10 @@ import IconSearchX2 from "~/assets/ic_Search@2x.png";
 interface Props {
   value: string;
   onChange: (value: string) => void;
+  onSubmit: () => void;
 }
 
-const Search = ({ value, onChange }: Props) => {
+const Search = ({ value, onChange, onSubmit }: Props) => {
   const handleChange = useCallback((value: string | number) => {
     onChange(value.toString());
   }, []);
@@ -24,7 +25,7 @@ const Search = ({ value, onChange }: Props) => {
         />
       }
       button={
-        <Button>
+        <Button onClick={onSubmit}>
           <Icon srcSet={`${IconSearch}, ${IconSearchX2} 2x`} />
         </Button>
       }

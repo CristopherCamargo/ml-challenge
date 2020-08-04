@@ -3,6 +3,9 @@ export default {
   currentProduct: {
     id: "",
     price: 0,
+    currency: "",
+    decimals: 0,
+    condition: "",
     shortDescription: "",
     description: "",
     imageURI: "",

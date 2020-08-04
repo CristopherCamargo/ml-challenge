@@ -11,6 +11,10 @@ export const ProductItemWrapper = styled.article`
   .city {
     font-size: 12px;
   }
+  a {
+    text-decoration: none;
+    color: initial;
+  }
 `;
 
 export const PriceWrapper = styled.div`
